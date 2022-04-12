@@ -1,3 +1,9 @@
+:root {
+  --font-family: "Comfortaa", cursive;
+  --main-color: #0075ff;
+  --title-size: 3rem;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -9,11 +15,11 @@ html {
 
 body {
   overflow: hidden;
-  font-family: "Comfortaa", cursive;
+  font-family: var(--font-family);
 }
 
 a {
-  color: #0075ff;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -37,7 +43,7 @@ main div {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: var(--title-size);
 }
 
 @media screen and (max-width: 700px) {
