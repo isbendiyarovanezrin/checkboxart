@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  overflow: hidden;
+  font-family: "Comfortaa", cursive;
+}
+
+a {
+  color: #0075ff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: line-through;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+main div {
+  user-select: none;
+  line-height: 0;
+  font-size: 0;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width: 700px) {
+  html {
+    font-size: 7px;
+  }
+}
