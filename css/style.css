@@ -21,6 +21,7 @@ body {
 a {
   color: var(--main-color);
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 a:hover {
