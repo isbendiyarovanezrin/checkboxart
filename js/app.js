@@ -225,3 +225,15 @@ document.querySelector("[data-div='39'] [data-input='22']").checked = true;
 document.querySelector("[data-div='39'] [data-input='24']").checked = true;
 document.querySelector("[data-div='40'] [data-input='21']").checked = true;
 document.querySelector("[data-div='40'] [data-input='25']").checked = true;
+
+const inputs = document.querySelectorAll("input");
+const sound = document.getElementById("sound");
+
+inputs.forEach((input) => input.addEventListener("change", play));
+
+function play(e) {
+  if (e.target.checked) {
+    sound.currentTime = 0;
+    sound.play();
+  }
+}
