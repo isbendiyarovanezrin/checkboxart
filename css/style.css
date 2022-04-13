@@ -1,6 +1,7 @@
 :root {
   --font-family: "Comfortaa", cursive;
   --main-color: #0075ff;
+  --bg-color: #fefbfb;
   --title-size: 3rem;
 }
 
@@ -16,6 +17,7 @@ html {
 body {
   overflow: hidden;
   font-family: var(--font-family);
+  background-color: var(--bg-color);
 }
 
 #container {
