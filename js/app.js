@@ -1,56 +1,19 @@
 "use strict";
 
 const main = document.querySelector("main");
-const desktop = window.matchMedia("(min-width: 650px)");
-const tablet = window.matchMedia("(min-width: 500px) and (max-width: 650px)");
-const mobile1 = window.matchMedia("(min-width: 350px) and (max-width: 500px)");
-const mobile2 = window.matchMedia("(max-width: 350px)");
+const inputs = document.querySelectorAll("input");
+const sound = document.getElementById("sound");
 
-if (desktop.matches) {
-  for (let i = 0; i < 40; i++) {
-    const div = document.createElement("div");
-    div.dataset.div = i + 1;
-    main.appendChild(div);
+for (let i = 0; i < 40; i++) {
+  const div = document.createElement("div");
+  div.dataset.div = i + 1;
+  main.appendChild(div);
 
-    for (let j = 0; j < 40; j++) {
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      input.dataset.input = j + 1;
-      div.appendChild(input);
-    }
-  }
-} else if (tablet.matches) {
-  for (let i = 0; i < 40; i++) {
-    const div = document.createElement("div");
-    main.appendChild(div);
-
-    for (let j = 0; j < 35; j++) {
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      div.appendChild(input);
-    }
-  }
-} else if (mobile1.matches) {
-  for (let i = 0; i < 40; i++) {
-    const div = document.createElement("div");
-    main.appendChild(div);
-
-    for (let j = 0; j < 25; j++) {
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      div.appendChild(input);
-    }
-  }
-} else if (mobile2.matches) {
-  for (let i = 0; i < 40; i++) {
-    const div = document.createElement("div");
-    main.appendChild(div);
-
-    for (let j = 0; j < 21; j++) {
-      const input = document.createElement("input");
-      input.type = "checkbox";
-      div.appendChild(input);
-    }
+  for (let j = 0; j < 40; j++) {
+    const input = document.createElement("input");
+    input.type = "checkbox";
+    input.dataset.input = j + 1;
+    div.appendChild(input);
   }
 }
 
@@ -237,9 +200,6 @@ for (let i = 0; i < position.length; i++) {
 }
 
 // sound effect
-const inputs = document.querySelectorAll("input");
-const sound = document.getElementById("sound");
-
 inputs.forEach((input) => input.addEventListener("change", play));
 
 function play(e) {
